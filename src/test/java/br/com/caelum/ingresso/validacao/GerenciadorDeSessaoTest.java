@@ -67,7 +67,7 @@ public class GerenciadorDeSessaoTest {
 	public void garanteQueNaoDevePermitirUmaSessaoQueTerminaNoProximoDia() {
 		List <Sessao> sessoes = Collections.emptyList();
 		GerenciadorDeSessao gerenciador = new GerenciadorDeSessao(sessoes);
-		Sessao sessaQueTerminaAmanha = new Sessao(LocalTime.parse("23:00:00"), roqueOne, sala3D);
+		Sessao sessaQueTerminaAmanha = new Sessao(LocalTime.parse("20:00:00"), roqueOne, sala3D);
 		Assert.assertTrue(gerenciador.cabe(sessaQueTerminaAmanha));
 	}
 }
